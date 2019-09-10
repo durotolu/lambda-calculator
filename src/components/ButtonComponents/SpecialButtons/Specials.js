@@ -1,4 +1,5 @@
 import React from "react";
+import { specials } from "../components/data";
 
 //import any components needed
 
