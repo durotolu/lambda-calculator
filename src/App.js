@@ -4,11 +4,46 @@ import "./App.css";
 // STEP 4 - import the button and display components
 import Numbers from "./components/ButtonComponents/NumberButtons/Numbers";
 import Operators from "./components/ButtonComponents/OperatorButtons/Operators";
+import Specials from "./components/ButtonComponents/SpecialButtons/Specials";
 
 // Don't forget to import any extra css/scss files you build into the correct component
 
 // Logo has already been provided for you. Do the same for the remaining components
 import Logo from "./components/DisplayComponents/Logo";
+import Display from "./components/DisplayComponents/Display";
+
+const numberStyle = {
+  backgroundColor: '#1c4378',
+  borderRadius: '50%',
+  width: '50px',
+  height: '50px',
+  margin: '5px',
+  color: 'white',
+}
+
+const operatorStyle = {
+  backgroundColor: '#2a7292',
+  borderRadius: '50%',
+  width: '50px',
+  height: '50px',
+  margin: '5px',
+  color: 'white',
+}
+
+const specialStyle = {
+  backgroundColor: '#275d9c',
+  borderRadius: '50%',
+  width: '50px',
+  height: '50px',
+  margin: '5px',
+  color: 'white',
+}
+  // background: '#a51f37',
+  // display: #323335
+  // 3 special operators: #275d9c
+  // numbers: #1c4378
+  // operators: #2a7292
+  // shadow: #460e14
 
 function App() {
   // STEP 5 - After you get the components displaying using the provided data file, write your state hooks here.
@@ -19,10 +54,14 @@ function App() {
 
   return (
     <div className="container">
-      <Logo />
+      <Logo className="display" />
+      <Display/ >
       <div className="App">
-        <Numbers />
-        <Operators />
+        <div>
+          <Specials specialStyle={specialStyle} />
+          <Numbers numberStyle={numberStyle} />
+        </div>
+        <Operators operatorStyle={operatorStyle} />
         {/* STEP 4 - Render your components here and be sure to properly import/export all files */}
       </div>
     </div>
