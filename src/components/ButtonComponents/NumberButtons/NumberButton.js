@@ -2,9 +2,9 @@ import React from "react";
 //import { numbers } from "../../../data";
 
 const NumberButton = (props) => {
-  const {number, numberStyle} = props;
+  const {number, numberStyle, zeroStyle, zero, displayFunc} = props;
   return (
-    <button style={numberStyle}>{number}
+    <button onClick={evt => displayFunc(number)} style={numberStyle}>{number}
       {/* Display a button element rendering the data being passed down from the parent container on props */}
     </button>
   );

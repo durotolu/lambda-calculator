@@ -9,7 +9,7 @@ import { numbers } from '../../../data'
 */
 //Import your array data to from the provided data file
 
-const Numbers = ({numberStyle}) => {
+const Numbers = ({numberStyle, zeroStyle, displayFunc}) => {
   // STEP 2 - add the imported data to state
   //const {numbers} = props;
 
@@ -20,7 +20,7 @@ const Numbers = ({numberStyle}) => {
       {/* STEP 3 - Use .map() to iterate over your array data and return a button
        component matching the name on the provided file. Pass
        it any props needed by the child component*/
-       numbers.map((number) =>  (<NumberButton numberStyle={numberStyle} key={number} number={number} />))
+       numbers.map((number) =>  (<NumberButton zeroStyle={zeroStyle} numberStyle={numberStyle} key={number} number={number} zero={numbers[9]} displayFunc={displayFunc} />))
        }
     </div>
   );
